@@ -25,6 +25,7 @@ module "Ec2" {
   source             = "./modules/ec2"
   key_name           = var.key_name
   ami_name           = var.ami_id
+  vpc_name           = module.network.vpc_name
   sg_id              = module.security_groups.web_sg_id
   public_subnets     = module.network.public_subnets_id
   instance_type      = var.instance_type
