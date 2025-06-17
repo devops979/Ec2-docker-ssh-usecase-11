@@ -2,6 +2,7 @@ resource "aws_instance" "web-servers" {
   ami                    = var.ami_name
   instance_type          = var.instance_type
   subnet_id              = var.public_subnets
+  vpc_id                 = var.vpc_id
   associate_public_ip_address= true
   vpc_security_group_ids = [var.sg_id]
   key_name               = var.key_name
@@ -11,7 +12,7 @@ resource "aws_instance" "web-servers" {
   }
    user_data              = var.user_data
   tags = {
-    Name = "${var.project_name}"
+    Name = "${var.project_name}-web-${count.index + 1}"
   }
 }
 
