@@ -39,7 +39,7 @@ variable "volume_size" {
 }
 
 
-variable "vpc_id" {
-  description = "The id of vpc id"
+variable "vpc_name" {
+  description = "The name of vpc"
   type        = string
 }
