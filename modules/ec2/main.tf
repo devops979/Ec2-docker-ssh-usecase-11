@@ -1,4 +1,5 @@
 resource "aws_instance" "web-servers" {
+  count                  = length(var.public_subnets)
   ami                    = var.ami_name
   instance_type          = var.instance_type
   subnet_id              = var.public_subnets
