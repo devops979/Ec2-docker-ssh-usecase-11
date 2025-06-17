@@ -31,13 +31,15 @@ variable "user_data" {
 
 }
 
+
 variable "volume_size" {
   description = "Size of the root block device in GB"
   type        = number
   default     = 30
 }
-variable "volume_type" {
-  description = "Type of the root block device"
+
+
+variable "vpc_id" {
+  description = "The id of vpc id"
   type        = string
-  default     = "gp3"
 }
