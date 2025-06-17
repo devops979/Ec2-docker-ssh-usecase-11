@@ -37,6 +37,12 @@ variable "volume_size" {
   default     = 30
 }
 
+variable "volume_type" {
+  description = "Type of the root block device"
+  type        = string
+  default     = "gp3"
+}
+
 
 variable "vpc_name" {
   description = "The name of vpc"
