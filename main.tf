@@ -36,6 +36,7 @@ module "Ec2" {
                 sudo apt update -y
                 sudo apt-get install -y nginx docker.io
                 sudo systemctl start docker
-                sudo systemctl enable docker                
+                sudo systemctl enable docker
+                echo "<h1>Hello from $(hostname -f) in us-east-1</h1>" | sudo tee /var/www/html/index.html
                 EOF
 }
