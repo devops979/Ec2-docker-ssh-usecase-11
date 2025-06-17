@@ -14,14 +14,6 @@ module "network" {
   owner              = "demo-webapp-alb"
 }
 
-module "nat" {
-  source           = "./modules/nat"
-  public_subnet_id = module.network.public_subnets_id[0]
-  private_rt_ids   = module.network.private_route_table_ids
-  vpc_name         = module.network.vpc_name
-}
-
-
 
 module "security_groups" {
   source = "./modules/security_groups"
