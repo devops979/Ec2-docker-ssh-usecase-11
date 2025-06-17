@@ -9,7 +9,7 @@ terraform {
 
   backend "s3" {
     bucket = "demo-usecases-bucket-new"
-    key    = "usecase-03/terraform.tftstate"
+    key    = "usecase-11/terraform.tftstate"
     region = "us-east-1"
   }
 }
