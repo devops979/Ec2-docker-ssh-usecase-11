@@ -26,7 +26,6 @@ module "Ec2" {
   key_name           = var.key_name
   ami_name           = var.ami_id
   sg_id              = module.security_groups.web_sg_id
-  vpc_name           = module.network.vpc_name
   public_subnets     = module.network.public_subnets_id
   instance_type      = var.instance_type
   project_name       = "demo-instance"
