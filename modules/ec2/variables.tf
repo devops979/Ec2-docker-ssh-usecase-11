@@ -8,7 +8,6 @@ variable "instance_type" {}
 variable "key_name" {}
 variable "public_subnets" {}
 variable "sg_id" {}
-variable "vpc_name" {}
 #variable elb_listener {}
 #variable "iam_instance_profile" {
 #  description = "IAM instance profile for EC2 instances"
