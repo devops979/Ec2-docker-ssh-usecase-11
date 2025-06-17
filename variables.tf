@@ -64,3 +64,16 @@ variable "tags" {
     Name = "TerraformProject"
   }
 }
+
+
+variable "vpc_name" {
+  description = "Name of the VPC"
+  type        = string
+  default     = "demo-nginx-vpc"
+}
+
+variable "owner" {
+  description = "Owner of the infrastructure"
+  type        = string
+  default     = "demo-nginx-dev"
+}
